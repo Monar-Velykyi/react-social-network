@@ -1,0 +1,25 @@
+.nav {
+    grid-area: nav;
+    background: rgb(30, 29, 53);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.item {
+    padding: 5px;
+    border-bottom: solid 0.2px #F0FFFF;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: #5F9EA0;
+}
+
+.item a {
+    color: #F0FFFF;
+    text-decoration: none;
+}
+
+.item a:active {
+    color: gold;
+}

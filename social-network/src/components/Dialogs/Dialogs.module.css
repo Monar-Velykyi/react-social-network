@@ -1,0 +1,51 @@
+.dialogsall {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 4fr 8fr;
+    grid-template-areas: "dialogs dialogarea";
+    grid-gap: 10px;
+}
+
+.dialogs {
+    grid-area: dialogs;
+    border-right: solid 0.2px #2F4F4F;
+}
+
+.dialogarea {
+    grid-area: dialogarea;
+    display: grid;
+    grid-template-rows: 2fr;
+    grid-template-areas: "messages" "textarea";
+}
+
+.messages {
+    grid-area: messages;
+    height: 300px;
+    overflow: auto;
+}
+
+.textarea {
+    grid-area: textarea;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.messagetext {
+    width: 75%;
+    outline: none;
+    resize: none;
+    background: rgb(193, 226, 255);
+    padding: 10px;
+}
+
+.button {
+    width: 20%;
+    outline: none;
+}
+
+.h3 {
+    text-align: center;
+    padding: 10px;
+}

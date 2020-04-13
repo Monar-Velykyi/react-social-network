@@ -1,0 +1,12 @@
+header img {
+    width: 50px;
+}
+
+.header {
+    grid-area: header;
+    background: rgb(30, 29, 53);
+    color: #F0FFFF;
+}
+
+
+/*#2F4F4F green */
