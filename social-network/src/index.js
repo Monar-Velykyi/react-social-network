@@ -5,9 +5,10 @@ import './styles.css';
 import App from './App';
 
 let renderPage = (state) => {
-    debugger;
-    ReactDOM.render( <
-        App dispatch = { store.dispatch.bind(store) }
+    ReactDOM.render( 
+        
+        <App 
+        dispatch = { store.dispatch.bind(store) }
         state = { store.getState() }
         /> ,
         document.getElementById('root')
@@ -20,3 +21,4 @@ store.subscribe(() => {
     let state = store.getState()
     renderPage(state)
 })
+

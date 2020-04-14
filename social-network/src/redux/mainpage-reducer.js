@@ -1,3 +1,6 @@
+const NEW_POST_TEXT = 'NEW-POST-TEXT';
+const ADD_POST = 'ADD-POST';
+
 let initialState = {
     posts: [
         { id: 1, post: 'Hi! Welcome' },
@@ -8,10 +11,10 @@ let initialState = {
 
 const mainReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'NEW-POST-TEXT':
+        case NEW_POST_TEXT:
             state.textValue = action.newText;
             return state
-        case 'ADD-POST':
+        case ADD_POST:
             let post = {
                 id: state.posts.length + 1,
                 post: state.textValue

@@ -2,19 +2,19 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import Person from './Person/Person';
 import Message from './Message/Message';
-
+import {updateNewMessageText, addNewMessage} from '../../redux/actions'
 
 const Dialogs = (props) => {
 
     let newMessage = React.createRef();
 
     let addMessage = () => {
-        props.dispatch({type: 'ADD-MESSAGE'});
+        props.dispatch(addNewMessage());
     }
 
     let updateText = () => {
         let text = newMessage.current.value;
-        props.dispatch({type: 'NEW-MESSAGE-TEXT', newMessage: text});
+        props.dispatch(updateNewMessageText(text));
     }
 
     const dialogsElements = props.personData.person
