@@ -15,13 +15,17 @@ const mainReducer = (state = initialState, action) => {
             state.textValue = action.newText;
             return state
         case ADD_POST:
-            let post = {
-                id: state.posts.length + 1,
-                post: state.textValue
+            return {
+                ...state,
+                posts: [
+                    ...state.posts, {
+                        id: state.posts.length + 1,
+                        post: state.textValue
+                    }
+                ],
+                ...state.textValue,
+                textValue: ''
             }
-            state.posts.push(post);
-            state.textValue = '';
-            return state
         default:
             return state;
     }

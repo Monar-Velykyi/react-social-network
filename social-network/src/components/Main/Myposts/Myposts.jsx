@@ -4,7 +4,6 @@ import Post from './Post/Post';
 import {addNewPost, updateNewPostText} from '../../../redux/actions';
 
 const Myposts = (props) => {
-
     const postItem = props.posts
     .map(({id, post}) => (<Post id={id} message={post} />))
 

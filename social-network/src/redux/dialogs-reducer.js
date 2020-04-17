@@ -1,3 +1,6 @@
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const NEW_MESSAGE_TEXT = 'NEW-MESSAGE-TEXT';
+
 let initialState = {
     person: [
         { id: 1, name: 'Vanya' },
@@ -14,14 +17,17 @@ let initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD-MESSAGE':
-            let newMessage = {
-                message: state.textValue
+        case ADD_MESSAGE:
+            return {
+                ...state,
+                personMessage: [
+                    ...state.personMessage, {
+                        message: state.textValue
+                    }
+                ],
+                textValue: ''
             }
-            state.personMessage.push(newMessage);
-            state.textValue = '';
-            return state
-        case 'NEW-MESSAGE-TEXT':
+        case NEW_MESSAGE_TEXT:
             state.textValue = action.newMessage;
             return state
         default:

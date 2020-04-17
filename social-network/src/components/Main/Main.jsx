@@ -4,7 +4,6 @@ import Myposts from './Myposts/Myposts';
 
 
 const Main = (props) => {
-    debugger;
     return (
         <main className={classes.main}>
             <div className={classes.div}>
