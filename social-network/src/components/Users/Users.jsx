@@ -1,17 +1,21 @@
 import React from 'react';
 import UserInfo from './UserInfo/UserInfo'
-import s from './Users.module.css'
+import s from './UsersContainer.module.css'
 
 const Users = (props) => {
-    let usersArray = props.usersData.users
-    .map(({id, name, status, follow}, location) => (<UserInfo 
+    debugger;
+    let usersArray = props.users
+    .map(({id, name, status, follow, location}) => (<UserInfo 
         id={id} 
         name={name} 
         status={status}
-        follow={follow} 
-        city={location[id]} 
-        country={location[id]}/>));
-
+        follow={follow}
+        followAc={props.follow} 
+        unfollowAc={props.unFollow}
+        city={location.city} 
+        country={location.country}
+        />));
+        
     return (
     <div className={s.users}>
         {usersArray}

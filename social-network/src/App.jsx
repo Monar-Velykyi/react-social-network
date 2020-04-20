@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Main from './components/Main/Main';
 import Dialogs from './components/Dialogs/Dialogs';
-import Users from './components/Users/Users';
+import UsersContainer from './components/Users/UsersContainer';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 const App = (props) => {
@@ -19,9 +19,8 @@ const App = (props) => {
                     <Route path="/main" render={() => <Main 
                     postsData={props.state.postsData} 
                     dispatch={props.dispatch}/>} />
-                    <Route path="/users" render={() => <Users 
-                    usersData={props.state.usersData}
-                    dispatch={props.dispatch}/>}/>
+                    <Route path="/users" render={() => <UsersContainer 
+                    />}/>
                 </div>
             </div>
         </BrowserRouter>

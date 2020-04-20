@@ -17,3 +17,13 @@ export const addNewMessage = () => {
     const action = { type: 'ADD-MESSAGE' }
     return action;
 }
+
+export const follow = (userId) => {
+    const action = { type: 'FOLLOW', userId }
+    return action;
+}
+
+export const unFollow = (userId) => {
+    const action = { type: 'UNFOLLOW', userId }
+    return action;
+}

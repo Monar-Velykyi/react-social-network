@@ -3,8 +3,9 @@
     padding: 10px;
     margin-bottom: 10px;
     background: rgb(206, 232, 255);
+    font-size: 15px;
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 10% 90%;
     grid-template-areas: "avafollow description";
 }
 
@@ -14,13 +15,15 @@
 
 .profileimage {
     width: 100%;
-    padding: 10px;
+    height: 75%;
 }
 
 .follow {
     width: 100%;
-    height: 20px;
+    height: 25%;
+    padding: 5px;
     background: rgb(85, 128, 167);
+    color: whitesmoke;
     outline: none;
     border: none;
     cursor: pointer;
